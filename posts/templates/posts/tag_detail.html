@@ -14,8 +14,4 @@
             <a href="{{ url_for('posts.post_detail', slug=post.slug) }}">{{ post.title }}</a>
         </div>
     {% endfor %}
-
-    <div class="main-content">
-        {{ post.body }}
-    </div>
 {% endblock %}
