@@ -47,3 +47,4 @@ class Tag(db.Model):
     def __repr__(self):
         return '{}'.format(self.name)
 
+
