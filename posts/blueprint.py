@@ -9,8 +9,8 @@ posts = Blueprint('posts', __name__, template_folder='templates')
 @posts.route('/create', methods=["POST", "GET"])
 def create_post():
     if request.method == "POST":
-        title = request.form('title')
-        body = request.form('body')
+        title = request.form['title']
+        body = request.form['body']
 
         try:
             post = Post(title=title, body=body)
