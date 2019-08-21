@@ -28,7 +28,7 @@ class Post(db.Model):
         return '<Post id: {}, title: {}>'.format(self.id, self.title)
 
 
-class Tag(db.Model()):
+class Tag(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
     slug = db.Column(db.String(100))
@@ -38,5 +38,5 @@ class Tag(db.Model()):
         self.slug = slugify(self.name)
 
     def __repr__(self):
-        return '<Tag id: {}, name: {}'.format(self.id, self.name)
+        return '<Tag id: {}, name: {}>'.format(self.id, self.name)
 
